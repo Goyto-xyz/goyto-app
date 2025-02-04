@@ -1,7 +1,0 @@
-{
-  "name": "travio",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react-vite"
-}
