@@ -42,16 +42,16 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route path="/">
+          <Route exact path="/home">
             <Tab1 />
           </Route>
-          <Route path="/tab2">
+          <Route exact path="/tab2">
             <Tab2 />
           </Route>
           <Route path="/tab3">
             <Tab3 />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Redirect to="/home" />
           </Route>
         </IonRouterOutlet>
