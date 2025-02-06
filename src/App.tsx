@@ -1,4 +1,4 @@
-import { Redirect, Route } from "react-router-dom";
+import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
@@ -7,32 +7,33 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
-  setupIonicReact,
-} from "@ionic/react";
-import { IonReactRouter } from "@ionic/react-router";
-import { ellipse, square, triangle } from "ionicons/icons";
-import Tab1 from "./pages/Tab1";
-import Tab2 from "./pages/Tab2";
-import Tab3 from "./pages/Tab3";
+  setupIonicReact
+} from '@ionic/react';
+import { IonReactRouter } from '@ionic/react-router';
+import { ellipse, square } from 'ionicons/icons';
+import { HouseLine, MapPin } from '@phosphor-icons/react';
 
-import "@ionic/react/css/core.css";
+import Tab1 from './pages/Tab1';
+import Tab2 from './pages/Tab2';
+import Tab3 from './pages/Tab3';
+
+import '@ionic/react/css/core.css';
 
 /* Basic CSS for apps built with Ionic */
-import "@ionic/react/css/normalize.css";
-import "@ionic/react/css/structure.css";
-import "@ionic/react/css/typography.css";
+import '@ionic/react/css/normalize.css';
+import '@ionic/react/css/structure.css';
+import '@ionic/react/css/typography.css';
 
 /* Optional CSS utils that can be commented out */
-import "@ionic/react/css/padding.css";
-import "@ionic/react/css/float-elements.css";
-import "@ionic/react/css/text-alignment.css";
-import "@ionic/react/css/text-transformation.css";
-import "@ionic/react/css/flex-utils.css";
-import "@ionic/react/css/display.css";
+import '@ionic/react/css/padding.css';
+import '@ionic/react/css/float-elements.css';
+import '@ionic/react/css/text-alignment.css';
+import '@ionic/react/css/text-transformation.css';
+import '@ionic/react/css/flex-utils.css';
+import '@ionic/react/css/display.css';
 
-import "@ionic/react/css/palettes/dark.system.css";
-
-import "./theme/variables.css";
+import './theme/tailwind.css';
+import './theme/variables.css';
 
 setupIonicReact();
 
@@ -41,7 +42,7 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/tab1">
+          <Route exact path="/">
             <Tab1 />
           </Route>
           <Route exact path="/tab2">
@@ -51,21 +52,20 @@ const App: React.FC = () => (
             <Tab3 />
           </Route>
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/home" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+          <IonTabButton tab="tab1" href="/">
+            <HouseLine weight="fill" size={28} />
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+            <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg">
+              <MapPin size={32} weight="fill" />
+            </div>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
