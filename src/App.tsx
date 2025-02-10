@@ -8,7 +8,11 @@ import {
   setupIonicReact,
 } from '@ionic/react'
 import { IonReactRouter } from '@ionic/react-router'
-import { HouseLine, MapPinArea, UsersThree } from '@phosphor-icons/react'
+import {
+  ChatCircleText,
+  NavigationArrow,
+  IdentificationBadge,
+} from '@phosphor-icons/react'
 
 import Tab1 from './pages/Tab1'
 import Tab2 from './pages/Tab2'
@@ -53,17 +57,22 @@ const App: React.FC = () => (
           </Route>
         </IonRouterOutlet>
 
-        <IonTabBar slot="bottom" className="border-t border-gray-200">
+        <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/">
-            <HouseLine weight="fill" size={28} />
+            <ChatCircleText weight="bold" size={28} />
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <div className="w-14 h-14 rounded-full bg-[#0141A3] flex items-center justify-center shadow-lg">
-              <MapPinArea size={32} weight="fill" color="#fff" />
+            <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center shadow-lg">
+              <NavigationArrow
+                size={30}
+                weight="bold"
+                color="#fff"
+                className="rotate-90"
+              />
             </div>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <UsersThree weight="fill" size={28} />
+            <IdentificationBadge weight="bold" size={28} />
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
