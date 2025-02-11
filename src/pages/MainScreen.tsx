@@ -5,13 +5,12 @@ import {
   IonTitle,
   IonToolbar,
   IonImg,
-  IonTabButton,
-} from '@ionic/react'
-import { MagnifyingGlass, Users, Plus } from '@phosphor-icons/react'
-import ExploreContainer from '../components/ExploreContainer'
-import HeaderIconWrapper from '../components/HeaderIconWrapper'
-import Logo from '../assets/images/logo.svg'
-import './Tab2.css'
+  IonTabButton
+} from '@ionic/react';
+import { MagnifyingGlass, Users, Plus } from '@phosphor-icons/react';
+import ExploreContainer from '../components/ExploreContainer';
+import HeaderIconWrapper from '../components/HeaderIconWrapper';
+import Logo from '../assets/images/logo.svg';
 
 const MainScreen: React.FC = () => {
   return (
@@ -54,7 +53,7 @@ const MainScreen: React.FC = () => {
         <ExploreContainer name="Tab 2 page" />
       </IonContent>
     </IonPage>
-  )
-}
+  );
+};
 
-export default MainScreen
+export default MainScreen;
