@@ -15,7 +15,7 @@ import {
 } from '@phosphor-icons/react'
 
 import Tab1 from './pages/Tab1'
-import Tab2 from './pages/Tab2'
+import MainScreen from './pages/MainScreen'
 import Tab3 from './pages/Tab3'
 
 import '@ionic/react/css/core.css'
@@ -43,11 +43,11 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/home">
+          <Route exact path="/tab1">
             <Tab1 />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path="/home">
+            <MainScreen />
           </Route>
           <Route path="/tab3">
             <Tab3 />
@@ -58,10 +58,10 @@ const App: React.FC = () => (
         </IonRouterOutlet>
 
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/">
+          <IonTabButton tab="tab1" href="/tab1">
             <ChatCircleText weight="bold" size={28} />
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="tab2" href="/">
             <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center shadow-lg">
               <NavigationArrow
                 size={30}
