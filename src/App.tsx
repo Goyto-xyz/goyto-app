@@ -59,7 +59,7 @@ const App: React.FC = () => (
 
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
-            <ChatCircleText weight="bold" size={28} />
+            <ChatCircleText weight="bold" size={28} color="#000" />
           </IonTabButton>
           <IonTabButton tab="tab2" href="/">
             <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center shadow-lg">
@@ -72,7 +72,7 @@ const App: React.FC = () => (
             </div>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IdentificationBadge weight="bold" size={28} />
+            <IdentificationBadge weight="bold" size={28} color="#000" />
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
