@@ -1,0 +1,16 @@
+ion-button {
+  --background: #e4e4e4;
+  --background-hover: #e4e4e4;
+  --background-activated: #e4e4e4;
+  --background-focused: #e4e4e4;
+
+  --box-shadow: none !important;
+  --border-radius: 12px !important;
+
+  width: 40px !important;
+  height: 40px !important;
+}
+
+button {
+  padding: 9px !important;  
+}
