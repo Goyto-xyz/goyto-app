@@ -1,8 +1,8 @@
-ion-button {
+.custom-ion-button {
   --background: #e4e4e4;
   --background-hover: #e4e4e4;
-  --background-activated: #e4e4e4;
-  --background-focused: #e4e4e4;
+  --background-activated: #8e8e8e;
+  --background-focused: #8e8e8e;
 
   --box-shadow: none !important;
   --border-radius: 12px !important;
@@ -11,6 +11,22 @@ ion-button {
   height: 40px !important;
 }
 
-button {
-  padding: 9px !important;  
+.button-native {
+  width: auto !important;
+  padding: 9px !important;
+}
+
+ion-searchbar {
+  --background: #f1f1f1 !important;
+  --box-shadow: none !important;
+  --border-radius: 12px !important;
+
+  --icon-color: #b2b2b2 !important;
+  --placeholder-color: #b2b2b2 !important;
+  --clear-button-color: #b2b2b2 !important;
+}
+
+.searchbar-input-container {
+  border-radius: 12px;
+  border: 2px solid #000;
 }
