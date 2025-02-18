@@ -97,13 +97,15 @@ const MainScreen: React.FC = () => {
                   '--background-activated': '#68be00',
                   '--background-focused': '#68be00',
                   width: '100px',
-                  height: '25px',
-                  color: '#000',
+                  height: '35px',
                 }}
                 shape="round"
+                size="small"
               >
-                <p className="text-sm font-semibold">+20</p>&nbsp;
-                <IonImg src={Point} className="w-[25px] h-[25px]"></IonImg>
+                <div className="flex justify-between items-center gap-2">
+                  <p className="text-sm font-semibold text-black">+20</p>
+                  <IonImg src={Point} className="w-[25px] h-[25px]"></IonImg>
+                </div>
               </IonButton>
             </div>
           </IonList>
