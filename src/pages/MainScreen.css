@@ -7,13 +7,12 @@
   --box-shadow: none !important;
   --border-radius: 12px !important;
 
-  width: 40px !important;
-  height: 40px !important;
+  width: auto;
+  aspect-ratio: 1;
 }
 
-.button-native {
-  width: auto !important;
-  padding: 9px !important;
+ion-button::part(native) {
+  padding: 10px !important;
 }
 
 ion-searchbar {
