@@ -28,17 +28,17 @@ const MainScreen: React.FC = () => {
         <IonToolbar>
           <div className="flex justify-between items-start px-[10px] py-[30px]">
             <IonButton id="open-modal" className="custom-ion-button">
-              <MagnifyingGlass weight="bold" size={24} color="#000" />
+              <MagnifyingGlass weight="bold" size={22} color="#000" />
             </IonButton>
 
             <IonImg className="w-[100px]" src={Logo}></IonImg>
 
             <div className="flex flex-col space-y-1">
               <IonButton className="custom-ion-button">
-                <Users weight="bold" size={24} color="#000" />
+                <Users weight="bold" size={22} color="#000" />
               </IonButton>
               <IonButton className="custom-ion-button">
-                <Plus weight="bold" size={24} color="#000" />
+                <Plus weight="bold" size={22} color="#000" />
               </IonButton>
             </div>
           </div>
