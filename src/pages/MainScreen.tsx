@@ -7,27 +7,29 @@ import {
   IonToolbar,
   IonImg,
   IonButton,
-  IonModal,
-  IonSearchbar,
-  IonList,
-  IonItem,
-  IonLabel,
 } from '@ionic/react'
-import { MagnifyingGlass, Users, Plus, Info } from '@phosphor-icons/react'
+import { MagnifyingGlass, Users, Plus } from '@phosphor-icons/react'
 import ExploreContainer from '../components/ExploreContainer'
+import SearchModal from '../components/SearchModal'
 import Logo from '../assets/images/logo.svg'
-import Point from '../assets/images/point.svg'
-import './MainScreen.css'
 
 const MainScreen: React.FC = () => {
   const modal = useRef<HTMLIonModalElement>(null)
+
+  const openModal = () => {
+    modal.current?.present()
+  }
 
   return (
     <IonPage>
       <IonHeader collapse="fade" className="bg-transparent !shadow-none">
         <IonToolbar>
           <div className="flex justify-between items-start px-[10px] py-[30px]">
-            <IonButton id="open-modal" className="custom-ion-button">
+            <IonButton
+              id="search-modal"
+              className="custom-ion-button"
+              onClick={openModal}
+            >
               <MagnifyingGlass weight="bold" size={22} color="#000" />
             </IonButton>
 
@@ -54,63 +56,7 @@ const MainScreen: React.FC = () => {
         <ExploreContainer name="Tab 2 page" />
       </IonContent>
 
-      <IonModal ref={modal} trigger="open-modal" initialBreakpoint={0.9}>
-        <IonContent className="ion-padding">
-          <IonSearchbar
-            onClick={() => modal.current?.setCurrentBreakpoint(0.75)}
-            placeholder="Search around here..."
-          ></IonSearchbar>
-          <IonList className="!pt-0">
-            <IonItem className="pb-3">
-              <p className="text-[#b2b2b2]">2 places nearby</p>
-            </IonItem>
-            <IonItem className="py-1">
-              <IonLabel className="!flex justify-between items-center">
-                <div>
-                  <h2 className="!mb-2 !text-xl !font-semibold">
-                    Canyon Station
-                  </h2>
-                  <p className="!text-lg text-[#b2b2b2] !mb-2">
-                    Bangalore, Karnataka
-                  </p>
-                </div>
-                <Info size={22} color="#b2b2b2" />
-              </IonLabel>
-            </IonItem>
-            <IonItem className="py-1">
-              <IonLabel className="!flex justify-between items-center">
-                <div>
-                  <h2 className="!mb-2 !text-xl !font-semibold">Café Aroma</h2>
-                  <p className="!text-lg text-[#b2b2b2] !mb-2">
-                    Park Glasswi, Cape Atrys
-                  </p>
-                </div>
-                <Info size={22} color="#b2b2b2" />
-              </IonLabel>
-            </IonItem>
-            <div className="flex justify-between items-center py-1 px-4">
-              <p className="!text-sm !font-semibold">Add a new place</p>
-              <IonButton
-                style={{
-                  '--background': '#89FC00',
-                  '--background-hover': '#89FC00',
-                  '--background-activated': '#68be00',
-                  '--background-focused': '#68be00',
-                  width: '100px',
-                  height: '35px',
-                }}
-                shape="round"
-                size="small"
-              >
-                <div className="flex justify-between items-center gap-2">
-                  <p className="text-sm font-semibold text-black">+20</p>
-                  <IonImg src={Point} className="w-[25px] h-[25px]"></IonImg>
-                </div>
-              </IonButton>
-            </div>
-          </IonList>
-        </IonContent>
-      </IonModal>
+      <SearchModal modalRef={modal} />
     </IonPage>
   )
 }
