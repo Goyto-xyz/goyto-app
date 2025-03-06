@@ -31,17 +31,43 @@ ion-content, ion-page, ion-header, ion-toolbar {
     background: #E1FDC2;
   }
   
-  .messages-searchbar {
+ /* Enhanced Searchbar Styles */
+.messages-searchbar {
     --background: #ffffff !important;
-    --border-radius: 10px;
-    --box-shadow: none;
+    --border-radius: 20px !important; /* Increased border radius */
+    --box-shadow: none !important;
     --placeholder-color: #666;
     --icon-color: #666;
     --border-width: 0 !important;
     --border-style: none !important;
+    --border: none !important;
+    --outline: none !important;
+    --highlight-color-focused: transparent !important; /* Remove focus highlight */
     margin: 0 auto;
     padding: 0;
     width: 90%;
+  }
+  
+  .messages-searchbar::part(container),
+  .messages-searchbar::part(input),
+  .messages-searchbar::part(search-icon),
+  .messages-searchbar::part(cancel-button) {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  ion-searchbar.messages-searchbar .searchbar-input-container {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  
+  .messages-searchbar:focus,
+  .messages-searchbar:focus-within {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
   }
   
   .message-avatar {
