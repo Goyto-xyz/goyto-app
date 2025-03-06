@@ -1,0 +1,152 @@
+ion-content, ion-page, ion-header, ion-toolbar {
+    --background: #ffffff;
+  }
+  
+  .messages-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 16px 10px;
+  }
+  
+  .ion-no-border {
+    --background: #ffffff;
+  }
+  
+  .messages-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .header-icons {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .header-icons ion-icon {
+    font-size: 24px;
+    padding: 8px;
+    border-radius: 12.5%;
+    background: #E1FDC2;
+  }
+  
+  .messages-searchbar {
+    --background: #ffffff !important;
+    --border-radius: 10px;
+    --box-shadow: none;
+    --placeholder-color: #666;
+    --icon-color: #666;
+    --border-width: 0 !important;
+    --border-style: none !important;
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+  }
+  
+  .message-avatar {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+  }
+  
+  .avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .message-container {
+    background: #F4F4F4;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    border-radius: 36px 36px 0 0;
+    margin-top: 8px;
+    height: 100%;
+  }
+  
+  .message-item {
+    padding: 0 16px;
+    --background: transparent;
+    margin-bottom: 8px;
+    --border-style: none !important;
+    --border-width: 0 !important;
+    --inner-border-width: 0 !important;
+  }
+  
+  ion-item {
+    --border-style: none !important;
+    --border-width: 0 !important;
+    --inner-border-width: 0 !important;
+  }
+  
+  .messages-list {
+    background: transparent;
+  }
+  
+  .message-item ion-avatar {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+  }
+  
+  .message-item ion-label {
+    margin: 0;
+  }
+  
+  .message-item h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  
+  .message-item p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+  
+  .message-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+  
+  .message-time {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .status-icon {
+    font-size: 16px;
+  }
+  
+  .status-icon.read {
+    color: #4caf50;
+  }
+  
+  .status-icon.delivered {
+    color: #999;
+  }
+  
+  .status-icon.waiting {
+    width: 8px;
+    height: 8px;
+    background: #666;
+    border-radius: 50%;
+  }
+  
+  ion-item::part(native) {
+    --padding-start: 0;
+    --inner-padding-end: 0;
+  }
+  
+  ion-list {
+    --ion-item-background: transparent;
+  }
