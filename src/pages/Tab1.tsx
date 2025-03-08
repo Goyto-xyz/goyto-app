@@ -17,6 +17,8 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <ExploreContainer name="Tab 1 page" />
+
+        testing
       </IonContent>
     </IonPage>
   );

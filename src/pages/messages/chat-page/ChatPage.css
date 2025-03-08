@@ -1,0 +1,237 @@
+/* Chat Page Styles */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: linear-gradient(to bottom, #dcf8c6 0%, #c9e8f7 50%, #d8c8f0 100%);
+  }
+  
+  .chat-toolbar {
+    --padding-start: 8px;
+    --padding-end: 8px;
+    --background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .chat-contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .chat-avatar {
+    width: 36px;
+    height: 36px;
+    margin-right: 5px;
+  }
+  
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .contact-status {
+    font-size: 12px;
+    color: #4caf50;
+  }
+  
+  .avatar-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .avatar-initial {
+    font-size: 16px;
+  }
+  
+  .icon-button {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    color: #555;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .chat-content {
+    --background: transparent;
+    --padding-top: 12px;
+    --padding-bottom: 12px;
+  }
+  
+  .messages-container {
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .message-bubble {
+    max-width: 70%;
+    margin-bottom: 8px;
+    display: flex;
+  }
+  
+  .message-bubble.sent {
+    align-self: flex-end;
+  }
+  
+  .message-bubble.received {
+    align-self: flex-start;
+  }
+  
+  .message-content {
+    padding: 10px 12px;
+    border-radius: 18px;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message-bubble.sent .message-content {
+    background-color: white;
+    border-bottom-right-radius: 4px;
+  }
+  
+  .message-bubble.received .message-content {
+    background-color: white;
+    border-bottom-left-radius: 4px;
+  }
+  
+  .message-content p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #303030;
+  }
+  
+  .message-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 2px;
+  }
+  
+  .message-time {
+    font-size: 11px;
+    color: #8c8c8c;
+  }
+  
+  .message-status {
+    font-size: 11px;
+    color: #8c8c8c;
+  }
+  
+  /* Typing indicator */
+  .typing-indicator {
+    align-self: flex-start;
+    background-color: white;
+    border-radius: 18px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .typing-dots {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .typing-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+    animation: typing 1.4s infinite ease-in-out;
+  }
+  
+  .typing-dots span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .typing-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .typing-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes typing {
+    0%,
+    60%,
+    100% {
+      transform: translateY(0);
+      opacity: 0.6;
+    }
+    30% {
+      transform: translateY(-4px);
+      opacity: 1;
+    }
+  }
+  
+  .chat-footer {
+    --background: transparent;
+    padding: 8px;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 24px;
+    padding: 4px 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .emoji-button,
+  .attachment-button {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    color: #555;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .message-input {
+    flex: 1;
+    --padding-start: 8px;
+    --padding-end: 8px;
+    --background: transparent;
+    --color: #303030;
+    --placeholder-color: #8c8c8c;
+  }
+  
+  .send-button {
+    background: #128c7e;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 0 4px;
+  }
+  
+  .send-button:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  
+  
