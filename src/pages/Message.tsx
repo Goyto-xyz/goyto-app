@@ -11,7 +11,7 @@ import {
   IonIcon,
 } from '@ionic/react';
 import { pencilOutline, addOutline, checkmarkOutline } from 'ionicons/icons';
-import './Tab1.css';
+import './Message.css';
 
 interface Message {
   id: number;
@@ -36,7 +36,7 @@ const messages: Message[] = [
   { id: 11, name: 'Joe', lastMessage: 'Last message...', time: '1 Feb', status: 'waiting', avatarColor: 'bg-pink-200' },
 ];
 
-const Tab1: React.FC = () => {
+const Message: React.FC = () => {
   return (
     <IonPage>
       <IonHeader className="ion-no-border">
@@ -94,4 +94,4 @@ const Tab1: React.FC = () => {
   );
 };
 
-export default Tab1;
+export default Message;

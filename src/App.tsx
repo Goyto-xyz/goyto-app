@@ -14,7 +14,7 @@ import {
   IdentificationBadge,
 } from '@phosphor-icons/react'
 
-import Tab1 from './pages/Tab1'
+import Message from './pages/Message'
 import MainScreen from './pages/MainScreen'
 import Tab3 from './pages/Tab3'
 
@@ -46,8 +46,8 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/tab1">
-            <Tab1 />
+          <Route exact path="/message">
+            <Message />
           </Route>
           <Route exact path="/home">
             <MainScreen />
@@ -61,7 +61,7 @@ const App: React.FC = () => (
         </IonRouterOutlet>
 
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
+          <IonTabButton tab="message" href="/message">
             <ChatCircleText weight="bold" size={28} color="#000" />
           </IonTabButton>
           <IonTabButton tab="tab2" href="/">
