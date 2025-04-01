@@ -1,2 +1,22 @@
 /* For information on how to create your own theme, please see:
 http://ionicframework.com/docs/theming/ */
+:root {
+  --ion-background-color: #fff;
+  --ion-text-color: #000;
+}
+
+ion-button {
+  --background: #003049;
+  --background-hover: #004468;
+  --background-activated: #004468;
+  --border-radius: 25px;
+  text-transform: uppercase;
+  font-family: 'Balsamiq Sans', cursive;
+  font-weight: 700;
+}
+
+.ion-color-secondary {
+  --ion-color-base: #bde0fe !important;
+  --ion-color-contrast: #003049 !important;
+  --ion-color-shade: #7dc3ff !important;
+}
