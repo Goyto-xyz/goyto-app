@@ -1,4 +1,4 @@
-import { useIonRouter, IonButton } from '@ionic/react';
+import { useIonRouter, IonButton, IonPage } from '@ionic/react';
 
 import LogoSVG from '@/assets/images/logo.svg';
 
@@ -6,7 +6,7 @@ const SplashScreen = () => {
   const router = useIonRouter();
 
   return (
-    <div className="bg-[#A2D2FF] flex flex-col h-screen">
+    <IonPage className="bg-[#A2D2FF] flex flex-col h-screen">
       <div className="flex flex-col items-center justify-center h-full">
         <img src={LogoSVG} alt="Logo" className="w-[185]" />
       </div>
@@ -18,7 +18,7 @@ const SplashScreen = () => {
           Create account
         </IonButton>
       </div>
-    </div>
+    </IonPage>
   );
 };
 

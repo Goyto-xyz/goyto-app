@@ -1,35 +1,77 @@
-import { IonButton, IonInput, IonText } from '@ionic/react';
-import { useState } from 'react';
+import {
+  IonBackButton,
+  IonIcon,
+  IonPage,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+  useIonRouter,
+  IonButtons,
+  IonList,
+  IonItem
+} from '@ionic/react';
+import { arrowBackOutline } from 'ionicons/icons';
+import { Wallet, EnvelopeOpen, CaretRight } from '@phosphor-icons/react';
 
 const SignInScreen = () => {
-  const [email, setEmail] = useState('');
+  const router = useIonRouter();
 
   return (
-    <div className="flex flex-col h-screen bg-white p-6 justify-center">
-      <IonText className="text-xl font-bold text-center mb-6">Sign In</IonText>
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonButtons slot="start">
+            <IonBackButton text={''} icon={arrowBackOutline} />
+          </IonButtons>
+          <IonTitle className="text-center font-inter font-700 text-[18px]">
+            Sign in
+          </IonTitle>
+        </IonToolbar>
+      </IonHeader>
 
-      <IonButton expand="full" color="dark" className="mb-4">
-        Connect Wallet
-      </IonButton>
+      <IonContent className="bg-[#A2D2FF]" scrollY={false}>
+        <IonList lines="inset">
+          <IonItem className="bg-[#A2D2FF]">
+            <div
+              className="flex w-full items-center py-4"
+              onClick={() => router.push('/signin-wallet')}
+            >
+              <div className="bg-[#BDE0FE] p-3 rounded-full">
+                <Wallet size={24} />
+              </div>
+              <span className="flex-1 text-lg ml-4">Sign in with wallet</span>
+              <CaretRight size={24} />
+            </div>
+          </IonItem>
 
-      <div className="flex items-center my-4">
-        <div className="border-t flex-grow"></div>
-        <IonText className="mx-2 text-gray-500">or</IonText>
-        <div className="border-t flex-grow"></div>
-      </div>
-
-      <IonInput
-        type="email"
-        placeholder="Enter your email"
-        value={email}
-        onIonChange={e => setEmail(e.detail.value!)}
-        className="border rounded-lg p-3 mb-4"
-      />
-
-      <IonButton expand="full" color="primary">
-        Continue with Email
-      </IonButton>
-    </div>
+          <IonItem className="bg-[#A2D2FF]">
+            <div
+              className="flex w-full items-center py-4"
+              onClick={() => router.push('/signin-email')}
+            >
+              <div className="bg-[#BDE0FE] p-3 rounded-full">
+                <EnvelopeOpen size={24} />
+              </div>
+              <span className="flex-1 text-lg ml-4">Sign in with email</span>
+              <CaretRight size={24} />
+            </div>
+          </IonItem>
+        </IonList>
+        <div className="">
+          {/* <div
+            className="flex items-center p-4"
+            onClick={() => history.push('/signin-email')}
+          >
+            <div className="bg-[#A2D2FF] p-3 rounded-full">
+              <IonIcon icon={mail} size="large" color="dark" />
+            </div>
+            <span className="flex-1 text-lg ml-4">Sign in with email</span>
+            <IonIcon icon={arrowForward} size="large" color="dark" />
+          </div> */}
+        </div>
+      </IonContent>
+    </IonPage>
   );
 };
 

@@ -20,3 +20,30 @@ ion-button {
   --ion-color-contrast: #003049 !important;
   --ion-color-shade: #7dc3ff !important;
 }
+
+ion-toolbar {
+  --background: #a2d2ff;
+  --border-style: none;
+  --padding-start: 12px;
+  --padding-end: 12px;
+}
+
+ion-back-button {
+  --color: #000;
+}
+
+ion-content {
+  &.bg-\[\#A2D2FF\] {
+    --background: #a2d2ff;
+  }
+}
+
+ion-item {
+  --padding-start: 12px;
+  --padding-end: 0;
+  --border-color: rgba(#003049, 0.3);
+
+  &.bg-\[\#A2D2FF\] {
+    --background: #a2d2ff;
+  }
+}
