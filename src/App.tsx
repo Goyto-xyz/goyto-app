@@ -37,7 +37,9 @@ import '@ionic/react/css/display.css';
 import './theme/tailwind.css';
 import './theme/variables.css';
 import { useEffect, useState } from 'react';
-import SplashScreen from './pages/SplashScreen';
+import SplashScreen from './pages/Splash';
+import SignInScreen from './pages/SignIn';
+import CreateAccountScreen from './pages/CreateAccount';
 
 setupIonicReact({
   rippleEffect: false,
@@ -60,12 +62,16 @@ const App: React.FC = () => {
 
   if (isLoggedIn === null) return null;
 
-  console.log({ isFirstLaunch: isLoggedIn });
-
   return (
     <IonApp>
       <IonReactRouter>
-        {isLoggedIn ? <p>Home</p> : <SplashScreen />}
+        <IonRouterOutlet>
+          <Route path="/">{isLoggedIn ? <p>Home</p> : <SplashScreen />}</Route>
+          {/* <Route exact path="/signin" component={SignInScreen} />*/}
+          {/* <Route path="/create-account">
+            <CreateAccountScreen />
+          </Route> */}
+        </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>
   );

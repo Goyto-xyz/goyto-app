@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef } from 'react';
 import {
   IonContent,
   IonHeader,
@@ -6,19 +6,19 @@ import {
   IonTitle,
   IonToolbar,
   IonImg,
-  IonButton,
-} from '@ionic/react'
-import { MagnifyingGlass, Users, Plus } from '@phosphor-icons/react'
-import ExploreContainer from '../components/ExploreContainer'
-import SearchModal from '../components/SearchModal'
-import Logo from '../assets/images/logo.svg'
+  IonButton
+} from '@ionic/react';
+import { MagnifyingGlass, Users, Plus } from '@phosphor-icons/react';
+import ExploreContainer from '../components/ExploreContainer';
+import SearchModal from '../components/SearchModal';
+import Logo from '../assets/images/logo.svg';
 
 const MainScreen: React.FC = () => {
-  const modal = useRef<HTMLIonModalElement>(null)
+  const modal = useRef<HTMLIonModalElement>(null);
 
   const openModal = () => {
-    modal.current?.present()
-  }
+    modal.current?.present();
+  };
 
   return (
     <IonPage>
@@ -56,9 +56,9 @@ const MainScreen: React.FC = () => {
         <ExploreContainer name="Tab 2 page" />
       </IonContent>
 
-      <SearchModal modalRef={modal} />
+      {/* <SearchModal modalRef={modal} /> */}
     </IonPage>
-  )
-}
+  );
+};
 
-export default MainScreen
+export default MainScreen;
