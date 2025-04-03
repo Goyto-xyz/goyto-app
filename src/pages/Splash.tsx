@@ -6,7 +6,7 @@ const SplashScreen = () => {
   const router = useIonRouter();
 
   return (
-    <IonPage className="bg-[#A2D2FF] flex flex-col h-screen">
+    <IonPage className="bg-[#A2D2FF] flex flex-col">
       <div className="flex flex-col items-center justify-center h-full">
         <img src={LogoSVG} alt="Logo" className="w-[185]" />
       </div>

@@ -1,6 +1,5 @@
 import {
   IonBackButton,
-  IonIcon,
   IonPage,
   IonHeader,
   IonToolbar,
@@ -24,7 +23,7 @@ const SignInScreen = () => {
           <IonButtons slot="start">
             <IonBackButton text={''} icon={arrowBackOutline} />
           </IonButtons>
-          <IonTitle className="text-center font-inter font-700 text-[18px]">
+          <IonTitle className="text-center font-inter font-700 text-lg">
             Sign in
           </IonTitle>
         </IonToolbar>
@@ -58,18 +57,6 @@ const SignInScreen = () => {
             </div>
           </IonItem>
         </IonList>
-        <div className="">
-          {/* <div
-            className="flex items-center p-4"
-            onClick={() => history.push('/signin-email')}
-          >
-            <div className="bg-[#A2D2FF] p-3 rounded-full">
-              <IonIcon icon={mail} size="large" color="dark" />
-            </div>
-            <span className="flex-1 text-lg ml-4">Sign in with email</span>
-            <IonIcon icon={arrowForward} size="large" color="dark" />
-          </div> */}
-        </div>
       </IonContent>
     </IonPage>
   );

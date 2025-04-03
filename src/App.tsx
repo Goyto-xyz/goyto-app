@@ -40,7 +40,9 @@ import './theme/variables.css';
 
 import SplashScreen from './pages/Splash';
 import SignInScreen from './pages/SignIn';
+import SignInWithEmail from './pages/SignIn/WithEmail';
 import CreateAccountScreen from './pages/CreateAccount';
+import { Toaster } from 'react-hot-toast';
 
 setupIonicReact({
   rippleEffect: false,
@@ -71,8 +73,10 @@ const App: React.FC = () => {
             {isLoggedIn ? <p>Home</p> : <SplashScreen />}
           </Route>
           <Route exact path="/signin" component={SignInScreen} />
+          <Route exact path="/signin-email" component={SignInWithEmail} />
           <Route exact path="/create-account" component={CreateAccountScreen} />
         </IonRouterOutlet>
+        <Toaster position="top-center" />
       </IonReactRouter>
     </IonApp>
   );

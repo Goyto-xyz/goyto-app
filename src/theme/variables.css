@@ -47,3 +47,12 @@ ion-item {
     --background: #a2d2ff;
   }
 }
+
+ion-input.ios,
+ion-input.md {
+  font-size: 18px;
+  min-height: 48px;
+  --padding-end: 16px;
+  --padding-start: 16px;
+  --placeholder-opacity: 0.3;
+}
