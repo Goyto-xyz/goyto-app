@@ -11,7 +11,7 @@ const SplashScreen = () => {
         <img src={LogoSVG} alt="Logo" className="w-[185]" />
       </div>
       <div className="flex flex-col gap-5 p-6">
-        <IonButton color="secondary" onClick={() => router.push('/signin')}>
+        <IonButton color="secondary" onClick={() => router.push('/sign-in')}>
           Sign in
         </IonButton>
         <IonButton onClick={() => router.push('/create-account')}>

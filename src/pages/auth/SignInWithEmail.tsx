@@ -33,7 +33,7 @@ function SignInWithEmail() {
 
   const onContinue = () => {
     if (validateEmail(email)) {
-      history.push('/signin-email/verify', {
+      history.push('/sign-in/otp', {
         email
       });
     } else {

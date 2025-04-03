@@ -34,7 +34,7 @@ const SignInScreen = () => {
           <IonItem className="bg-[#A2D2FF]">
             <div
               className="flex w-full items-center py-4"
-              onClick={() => router.push('/signin-wallet')}
+              onClick={() => router.push('/sign-in/wallet')}
             >
               <div className="bg-[#BDE0FE] p-3 rounded-full">
                 <Wallet size={24} />
@@ -47,7 +47,7 @@ const SignInScreen = () => {
           <IonItem className="bg-[#A2D2FF]">
             <div
               className="flex w-full items-center py-4"
-              onClick={() => router.push('/signin-email')}
+              onClick={() => router.push('/sign-in/email')}
             >
               <div className="bg-[#BDE0FE] p-3 rounded-full">
                 <EnvelopeOpen size={24} />

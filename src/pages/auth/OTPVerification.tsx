@@ -68,7 +68,7 @@ function OTPVerification() {
       <IonContent className="bg-[#A2D2FF]" scrollY={false} aria-hidden="true">
         <div className="flex flex-col gap-5 items-center justify-start pt-16 px-6">
           <p className="text-lg text-center">
-            We've sent a verification code to <strong>{email}</strong>.
+            We've sent a verification code to <strong>{email}</strong>
           </p>
 
           <OTPInput
