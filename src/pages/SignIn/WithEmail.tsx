@@ -70,7 +70,6 @@ function SignInWithEmail() {
           />
 
           <IonButton
-            expand="block"
             className="w-full"
             disabled={!emailIsValid}
             onClick={onContinue}

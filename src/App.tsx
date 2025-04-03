@@ -43,6 +43,7 @@ import SignInScreen from './pages/SignIn';
 import SignInWithEmail from './pages/SignIn/WithEmail';
 import CreateAccountScreen from './pages/CreateAccount';
 import { Toaster } from 'react-hot-toast';
+import OTPVerification from './pages/SignIn/OTPVerification';
 
 setupIonicReact({
   rippleEffect: false,
@@ -74,6 +75,11 @@ const App: React.FC = () => {
           </Route>
           <Route exact path="/signin" component={SignInScreen} />
           <Route exact path="/signin-email" component={SignInWithEmail} />
+          <Route
+            exact
+            path="/signin-email/verify"
+            component={OTPVerification}
+          />
           <Route exact path="/create-account" component={CreateAccountScreen} />
         </IonRouterOutlet>
         <Toaster position="top-center" />
