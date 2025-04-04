@@ -42,12 +42,18 @@ function SignInWithWallet() {
             Use your Web3 wallet for seamless and secure login
           </p>
 
-          <IonButton className="w-full">
+          <IonButton
+            className="w-full"
+            onClick={() => router.push('/email/linked-check')}
+          >
             <IonIcon slot="start" src={AgentMobileSVG} />
             <span className="ml-[10px]">Argent Mobile</span>
           </IonButton>
 
-          <IonButton className="w-full">
+          <IonButton
+            className="w-full"
+            onClick={() => router.push('/email/linked-check')}
+          >
             <IonIcon slot="start" src={BraavosSVG} />
             <span className="ml-[10px]">Braavos</span>
           </IonButton>

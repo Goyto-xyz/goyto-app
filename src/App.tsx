@@ -40,14 +40,18 @@ import './theme/tailwind.css';
 import './theme/variables.css';
 
 import SplashScreen from './pages/Splash';
+import CreateAccountScreen from './pages/CreateAccount';
+
+import OTPVerification from './pages/auth/OTPVerification';
 import SignInScreen from './pages/auth/SignIn';
 import SignInWithEmail from './pages/auth/SignInWithEmail';
-import CreateAccountScreen from './pages/CreateAccount';
-import OTPVerification from './pages/auth/OTPVerification';
+import SignInWithWallet from './pages/auth/SignInWithWallet';
 
+import EmailLinkedCheck from './pages/email/EmailLinkedCheck';
+import CreateWallet from './pages/wallet/CreateWallet';
 import LinkWallet from './pages/wallet/LinkWallet';
 import WalletLinkedCheck from './pages/wallet/WalletLinkedCheck';
-import SignInWithWallet from './pages/auth/SignInWithWallet';
+import LinkEmail from './pages/email/LinkEmail';
 
 setupIonicReact({
   rippleEffect: false,
@@ -87,13 +91,20 @@ const App: React.FC = () => {
           <Route exact path="/create-account" component={CreateAccountScreen} />
 
           {/* Wallet and Email Linking */}
+          <Route
+            exact
+            path="/email/linked-check"
+            component={EmailLinkedCheck}
+          />
+          <Route exact path="/email/link" component={LinkEmail} />
           <Route exact path="/wallet/link" component={LinkWallet} />
           <Route
             exact
             path="/wallet/linked-check"
             component={WalletLinkedCheck}
           />
-          {/* <Route exact path="/wallet/create" component={CreateWallet} />
+          <Route exact path="/wallet/create" component={CreateWallet} />
+          {/* 
           <Route exact path="/wallet/import" component={ImportWallet} /> */}
 
           {/* Permissions & Profile Setup */}
