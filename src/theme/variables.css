@@ -12,7 +12,13 @@ ion-button {
   --border-radius: 25px;
   text-transform: uppercase;
   font-family: 'Balsamiq Sans', cursive;
+  font-size: 18px;
   font-weight: 700;
+
+  &::part(native) {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
 }
 
 .ion-color-secondary {
@@ -55,4 +61,21 @@ ion-input.md {
   --padding-end: 16px;
   --padding-start: 16px;
   --placeholder-opacity: 0.3;
+}
+
+ion-textarea {
+  &.textarea-disabled {
+    opacity: 1 !important;
+
+    label {
+      display: none !important;
+    }
+  }
+}
+
+.sc-ion-buttons-ios-s ion-button:not(.button-round) {
+  --border-radius: 100px;
+  --color: #fff;
+  margin: 0;
+  font-size: 14px;
 }

@@ -45,6 +45,10 @@ import SignInWithEmail from './pages/auth/SignInWithEmail';
 import CreateAccountScreen from './pages/CreateAccount';
 import OTPVerification from './pages/auth/OTPVerification';
 
+import LinkWallet from './pages/wallet/LinkWallet';
+import WalletLinkedCheck from './pages/wallet/WalletLinkedCheck';
+import SignInWithWallet from './pages/auth/SignInWithWallet';
+
 setupIonicReact({
   rippleEffect: false,
   mode: 'ios'
@@ -70,13 +74,32 @@ const App: React.FC = () => {
     <IonApp>
       <IonReactRouter>
         <IonRouterOutlet>
+          {/* Main App */}
           <Route exact path="/">
             {isLoggedIn ? <p>Home</p> : <SplashScreen />}
           </Route>
+
+          {/* Auth */}
           <Route exact path="/sign-in" component={SignInScreen} />
           <Route exact path="/sign-in/email" component={SignInWithEmail} />
+          <Route exact path="/sign-in/wallet" component={SignInWithWallet} />
           <Route exact path="/sign-in/otp" component={OTPVerification} />
           <Route exact path="/create-account" component={CreateAccountScreen} />
+
+          {/* Wallet and Email Linking */}
+          <Route exact path="/wallet/link" component={LinkWallet} />
+          <Route
+            exact
+            path="/wallet/linked-check"
+            component={WalletLinkedCheck}
+          />
+          {/* <Route exact path="/wallet/create" component={CreateWallet} />
+          <Route exact path="/wallet/import" component={ImportWallet} /> */}
+
+          {/* Permissions & Profile Setup */}
+          {/* <Route exact path="/allow-access" component={AllowAccess} /> */}
+          {/* <Route exact path="/enable-notifications" component={EnableNotifications} />
+          <Route exact path="/create-profile" component={CreateProfile} /> */}
         </IonRouterOutlet>
         <Toaster position="top-center" />
       </IonReactRouter>

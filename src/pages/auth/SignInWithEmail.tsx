@@ -56,7 +56,7 @@ function SignInWithEmail() {
       </IonHeader>
 
       <IonContent className="bg-[#A2D2FF]" scrollY={false} aria-hidden="true">
-        <div className="flex flex-col gap-5 items-center justify-start pt-16 px-6">
+        <div className="flex flex-col gap-5 items-center justify-start pt-16 px-4">
           <p className="text-lg text-center">
             Enter your email address to continue
           </p>
@@ -79,7 +79,11 @@ function SignInWithEmail() {
 
           <div className="w-full border-b border-[rgba(0,0,0,0.2)]"></div>
 
-          <IonButton color="secondary" className="w-full">
+          <IonButton
+            color="secondary"
+            className="w-full"
+            onClick={() => history.push('/sign-in/wallet')}
+          >
             Connect wallet
           </IonButton>
 
