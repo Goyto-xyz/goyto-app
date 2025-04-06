@@ -6,19 +6,20 @@ import {
   IonHeader,
   IonPage,
   IonTitle,
-  IonToolbar,
-  useIonRouter
+  IonToolbar
 } from '@ionic/react';
 import { arrowBackOutline } from 'ionicons/icons';
 import { useEffect, useState } from 'react';
 import OTPInput from 'react-otp-input';
-import { useLocation } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 
 function OTPVerification() {
-  const router = useIonRouter();
+  const history = useHistory();
   const location = useLocation();
   // @ts-ignore
   const email = location.state?.email || '';
+  // @ts-ignore
+  const action = location.state?.action || '';
 
   const [otp, setOtp] = useState('');
   const [disabled, setDisabled] = useState(true);
@@ -49,7 +50,21 @@ function OTPVerification() {
 
   const onVerifyOTP = () => {
     // TODO: Implement OTP verification logic here
-    router.push('/wallet/linked-check');
+    switch (action) {
+      case 'createAccount':
+        history.push('/wallet/link', {
+          action: 'createAccount'
+        });
+        break;
+      case 'signIn':
+        history.push('/wallet/linked-check');
+        break;
+      case 'linkEmail':
+        history.push('/allow-access');
+        break;
+      default:
+        break;
+    }
   };
 
   return (
@@ -65,7 +80,7 @@ function OTPVerification() {
         </IonToolbar>
       </IonHeader>
 
-      <IonContent className="bg-[#A2D2FF]" scrollY={false} aria-hidden="true">
+      <IonContent className="bg-[#A2D2FF]" scrollY={false}>
         <div className="flex flex-col gap-5 items-center justify-start pt-16 px-4">
           <p className="text-lg text-center">
             We've sent a verification code to <strong>{email}</strong>

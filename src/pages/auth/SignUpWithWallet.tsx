@@ -16,7 +16,7 @@ import AgentMobileSVG from '@/assets/images/agentx.svg';
 import BraavosSVG from '@/assets/images/bravoos.svg';
 import { useLocation } from 'react-router';
 
-function SignInWithWallet() {
+function SignUpWithWallet() {
   const router = useIonRouter();
   const location = useLocation();
 
@@ -44,12 +44,12 @@ function SignInWithWallet() {
       <IonContent className="bg-[#A2D2FF]" scrollY={false}>
         <div className="flex flex-col gap-5 items-center justify-start pt-16 px-4">
           <p className="text-lg text-center">
-            Use your Web3 wallet for seamless and secure login
+            Secure onboarding with your Web3 wallet
           </p>
 
           <IonButton
             className="w-full"
-            onClick={() => router.push('/email/linked-check')}
+            onClick={() => router.push('/email/linke')}
           >
             <IonIcon slot="start" src={AgentMobileSVG} />
             <span className="ml-[10px]">Argent Mobile</span>
@@ -57,7 +57,7 @@ function SignInWithWallet() {
 
           <IonButton
             className="w-full"
-            onClick={() => router.push('/email/linked-check')}
+            onClick={() => router.push('/email/link')}
           >
             <IonIcon slot="start" src={BraavosSVG} />
             <span className="ml-[10px]">Braavos</span>
@@ -69,9 +69,9 @@ function SignInWithWallet() {
             <IonButton
               color="secondary"
               className="w-full"
-              onClick={() => router.push('/sign-in/email')}
+              onClick={() => router.push('/create-account')}
             >
-              Sign in with email
+              Sign up with email
             </IonButton>
           )}
 
@@ -91,4 +91,4 @@ function SignInWithWallet() {
   );
 }
 
-export default SignInWithWallet;
+export default SignUpWithWallet;

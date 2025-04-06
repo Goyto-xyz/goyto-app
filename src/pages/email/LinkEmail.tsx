@@ -34,8 +34,9 @@ function LinkEmail() {
 
   const onContinue = () => {
     if (validateEmail(email)) {
-      history.push('/sign-in/otp', {
-        email
+      history.push('/auth/otp', {
+        email,
+        action: 'linkEmail'
       });
     } else {
       toast.error('Please enter a valid email address');
@@ -69,7 +70,7 @@ function LinkEmail() {
         </IonToolbar>
       </IonHeader>
 
-      <IonContent className="bg-[#A2D2FF]" scrollY={false} aria-hidden="true">
+      <IonContent className="bg-[#A2D2FF]" scrollY={false}>
         <div className="flex flex-col gap-5 items-center justify-start pt-16 px-4">
           <p className="text-lg text-center">
             Add an email to secure your account and enable additional features

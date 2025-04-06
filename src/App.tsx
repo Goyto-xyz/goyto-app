@@ -40,12 +40,13 @@ import './theme/tailwind.css';
 import './theme/variables.css';
 
 import SplashScreen from './pages/Splash';
-import CreateAccountScreen from './pages/CreateAccount';
 
+import CreateAccount from './pages/auth/CreateAccount';
 import OTPVerification from './pages/auth/OTPVerification';
 import SignInScreen from './pages/auth/SignIn';
 import SignInWithEmail from './pages/auth/SignInWithEmail';
 import SignInWithWallet from './pages/auth/SignInWithWallet';
+import SignUpWithWallet from './pages/auth/SignUpWithWallet';
 
 import EmailLinkedCheck from './pages/email/EmailLinkedCheck';
 import CreatingWallet from './pages/wallet/CreatingWallet';
@@ -87,11 +88,12 @@ const App: React.FC = () => {
           </Route>
 
           {/* Auth */}
+          <Route exact path="/create-account" component={CreateAccount} />
+          <Route exact path="/auth/otp" component={OTPVerification} />
           <Route exact path="/sign-in" component={SignInScreen} />
           <Route exact path="/sign-in/email" component={SignInWithEmail} />
           <Route exact path="/sign-in/wallet" component={SignInWithWallet} />
-          <Route exact path="/sign-in/otp" component={OTPVerification} />
-          <Route exact path="/create-account" component={CreateAccountScreen} />
+          <Route exact path="/sign-up/wallet" component={SignUpWithWallet} />
 
           {/* Wallet and Email Linking */}
           <Route

@@ -16,6 +16,9 @@ function LinkWallet() {
   const location = useLocation();
   const history = useHistory();
 
+  //@ts-ignore
+  const action = location.state?.action || '';
+
   return (
     <IonPage>
       <IonHeader>
@@ -23,12 +26,7 @@ function LinkWallet() {
           {/* @ts-ignore */}
           {location.state?.connectNewWallet && (
             <IonButtons slot="start">
-              <IonBackButton
-                defaultHref="/wallet/linked-check"
-                text={''}
-                icon={arrowBackOutline}
-                color="dark"
-              />
+              <IonBackButton text={''} icon={arrowBackOutline} color="dark" />
             </IonButtons>
           )}
           <IonTitle className="text-center font-inter font-700 text-lg">
@@ -42,7 +40,7 @@ function LinkWallet() {
         </IonToolbar>
       </IonHeader>
 
-      <IonContent className="bg-[#A2D2FF]" scrollY={false} aria-hidden="true">
+      <IonContent className="bg-[#A2D2FF]" scrollY={false}>
         <div className="flex flex-col gap-5 items-center justify-start pt-16 px-4">
           <p className="text-lg text-center">
             To fully access Goyto’s Web3 features, link your Starknet wallet
@@ -52,7 +50,16 @@ function LinkWallet() {
 
           <IonButton
             className="w-full"
-            onClick={() => history.push('/sign-in/wallet')}
+            onClick={() =>
+              history.push(
+                action === 'createAccount'
+                  ? '/sign-up/wallet'
+                  : '/sign-in/wallet',
+                {
+                  action: 'linkWallet'
+                }
+              )
+            }
           >
             Connect Wallet
           </IonButton>
