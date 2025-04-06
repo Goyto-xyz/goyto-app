@@ -48,10 +48,13 @@ import SignInWithEmail from './pages/auth/SignInWithEmail';
 import SignInWithWallet from './pages/auth/SignInWithWallet';
 
 import EmailLinkedCheck from './pages/email/EmailLinkedCheck';
-import CreateWallet from './pages/wallet/CreateWallet';
+import CreatingWallet from './pages/wallet/CreatingWallet';
 import LinkWallet from './pages/wallet/LinkWallet';
 import WalletLinkedCheck from './pages/wallet/WalletLinkedCheck';
 import LinkEmail from './pages/email/LinkEmail';
+import NewWallet from './pages/wallet/NewWallet';
+import RecoveryPhrase from './pages/wallet/RecoveryPhrase';
+import VerifyPhrase from './pages/wallet/VerifyPhrase';
 
 setupIonicReact({
   rippleEffect: false,
@@ -97,13 +100,22 @@ const App: React.FC = () => {
             component={EmailLinkedCheck}
           />
           <Route exact path="/email/link" component={LinkEmail} />
+
+          <Route exact path="/wallet/creating" component={CreatingWallet} />
           <Route exact path="/wallet/link" component={LinkWallet} />
           <Route
             exact
             path="/wallet/linked-check"
             component={WalletLinkedCheck}
           />
-          <Route exact path="/wallet/create" component={CreateWallet} />
+          <Route exact path="/wallet/new" component={NewWallet} />
+          <Route
+            exact
+            path="/wallet/recovery-phrase"
+            component={RecoveryPhrase}
+          />
+
+          <Route exact path="/wallet/verify-phrase" component={VerifyPhrase} />
           {/* 
           <Route exact path="/wallet/import" component={ImportWallet} /> */}
 

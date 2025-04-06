@@ -12,7 +12,7 @@ ion-button {
   --border-radius: 25px;
   text-transform: uppercase;
   font-family: 'Balsamiq Sans', cursive;
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 700;
 
   &::part(native) {

@@ -56,7 +56,11 @@ function LinkWallet() {
           >
             Connect Wallet
           </IonButton>
-          <IonButton className="w-full" color="secondary">
+          <IonButton
+            className="w-full"
+            color="secondary"
+            onClick={() => history.push('/wallet/creating')}
+          >
             Create new wallet
           </IonButton>
         </div>
