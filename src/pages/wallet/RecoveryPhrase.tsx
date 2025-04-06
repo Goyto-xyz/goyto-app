@@ -85,7 +85,7 @@ function RecoveryPhrase() {
             <p className="text-center font-semibold">
               {copied ? (
                 <span className="flex items-center justify-center gap-1">
-                  <Check size={24} /> Copied!
+                  <Check size={24} weight="bold" /> Copied!
                 </span>
               ) : (
                 'Copy to clipboard'

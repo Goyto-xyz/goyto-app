@@ -57,6 +57,8 @@ import NewWallet from './pages/wallet/NewWallet';
 import RecoveryPhrase from './pages/wallet/RecoveryPhrase';
 import VerifyPhrase from './pages/wallet/VerifyPhrase';
 
+import AllowAccess from './pages/settings/AllowAccess';
+
 setupIonicReact({
   rippleEffect: false,
   mode: 'ios'
@@ -122,7 +124,7 @@ const App: React.FC = () => {
           <Route exact path="/wallet/import" component={ImportWallet} /> */}
 
           {/* Permissions & Profile Setup */}
-          {/* <Route exact path="/allow-access" component={AllowAccess} /> */}
+          <Route exact path="/allow-access" component={AllowAccess} />
           {/* <Route exact path="/enable-notifications" component={EnableNotifications} />
           <Route exact path="/create-profile" component={CreateProfile} /> */}
         </IonRouterOutlet>

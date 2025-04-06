@@ -49,7 +49,13 @@ function SignInWithWallet() {
 
           <IonButton
             className="w-full"
-            onClick={() => router.push('/email/linked-check')}
+            onClick={() =>
+              router.push(
+                action === 'linkWallet'
+                  ? '/allow-access'
+                  : '/email/linked-check'
+              )
+            }
           >
             <IonIcon slot="start" src={AgentMobileSVG} />
             <span className="ml-[10px]">Argent Mobile</span>
@@ -57,7 +63,13 @@ function SignInWithWallet() {
 
           <IonButton
             className="w-full"
-            onClick={() => router.push('/email/linked-check')}
+            onClick={() =>
+              router.push(
+                action === 'linkWallet'
+                  ? '/allow-access'
+                  : '/email/linked-check'
+              )
+            }
           >
             <IonIcon slot="start" src={BraavosSVG} />
             <span className="ml-[10px]">Braavos</span>

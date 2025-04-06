@@ -49,7 +49,11 @@ function SignUpWithWallet() {
 
           <IonButton
             className="w-full"
-            onClick={() => router.push('/email/linke')}
+            onClick={() =>
+              router.push(
+                action === 'linkWallet' ? '/allow-access' : '/email/link'
+              )
+            }
           >
             <IonIcon slot="start" src={AgentMobileSVG} />
             <span className="ml-[10px]">Argent Mobile</span>
@@ -57,7 +61,11 @@ function SignUpWithWallet() {
 
           <IonButton
             className="w-full"
-            onClick={() => router.push('/email/link')}
+            onClick={() =>
+              router.push(
+                action === 'linkWallet' ? '/allow-access' : '/email/link'
+              )
+            }
           >
             <IonIcon slot="start" src={BraavosSVG} />
             <span className="ml-[10px]">Braavos</span>
