@@ -19,12 +19,22 @@ ion-button {
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
+
+  &.button-small {
+    font-size: 14px;
+  }
 }
 
 .ion-color-secondary {
   --ion-color-base: #bde0fe !important;
   --ion-color-contrast: #003049 !important;
   --ion-color-shade: #7dc3ff !important;
+}
+
+.ion-color-tertiary {
+  --ion-color-base: #fff !important;
+  --ion-color-contrast: #003049 !important;
+  --ion-color-shade: #dfdfdf !important;
 }
 
 .ion-color-success {

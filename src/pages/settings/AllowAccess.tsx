@@ -28,6 +28,7 @@ function AllowAccess() {
   const handleEnableContacts = () => {
     // TODO: Implement contacts enabling logic
     setContactsEnabled(true);
+    router.push('/find-contacts');
   };
 
   return (
@@ -35,12 +36,7 @@ function AllowAccess() {
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonBackButton
-              defaultHref="/wallet/linked"
-              text={''}
-              icon={arrowBackOutline}
-              color="dark"
-            />
+            <IonBackButton text={''} icon={arrowBackOutline} color="dark" />
           </IonButtons>
           <IonTitle className="text-center font-inter font-700 text-lg">
             Please allow access

@@ -58,6 +58,7 @@ import RecoveryPhrase from './pages/wallet/RecoveryPhrase';
 import VerifyPhrase from './pages/wallet/VerifyPhrase';
 
 import AllowAccess from './pages/settings/AllowAccess';
+import FindMyFriends from './pages/settings/FindMyFriends';
 
 setupIonicReact({
   rippleEffect: false,
@@ -125,6 +126,7 @@ const App: React.FC = () => {
 
           {/* Permissions & Profile Setup */}
           <Route exact path="/allow-access" component={AllowAccess} />
+          <Route exact path="/find-contacts" component={FindMyFriends} />
           {/* <Route exact path="/enable-notifications" component={EnableNotifications} />
           <Route exact path="/create-profile" component={CreateProfile} /> */}
         </IonRouterOutlet>
